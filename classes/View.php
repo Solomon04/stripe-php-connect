@@ -10,12 +10,19 @@ class View
 {
     public $user;
 
+    /**
+     * View constructor.
+     */
     public function __construct()
     {
         $connect = new StripeConnect();
         $this->user = $connect->getUser(1); //TODO: Set This To Your Session ID
     }
 
+    /**
+     * HTML Header
+     * @return string
+     */
     public function renderHeader()
     {
         return "<html lang=\"en\">
@@ -36,6 +43,10 @@ class View
                   </head>";
     }
 
+    /**
+     * HTML Body
+     * @return string
+     */
     public function renderBody()
     {
         $navbar = $this->renderNavBar();
@@ -54,6 +65,10 @@ class View
 
     }
 
+    /**
+     * HTML Navbar
+     * @return string
+     */
     private function renderNavBar()
     {
         return "<header class=\"masthead mb-auto\">
@@ -66,6 +81,11 @@ class View
               </header>";
     }
 
+    /**
+     * HTML Main Content
+     * @param $stripe_id
+     * @return string
+     */
     private function renderMain($stripe_id)
     {
         if(!empty($stripe_id)){
@@ -75,6 +95,10 @@ class View
         }
     }
 
+    /**
+     * Render Main Content if stripe_id isn't null
+     * @return string
+     */
     private function renderLoginMain()
     {
         return "<main role=\"main\" class=\"inner cover\">
@@ -86,6 +110,10 @@ class View
                 </main>";
     }
 
+    /**
+     * Render Main Content if stripe_id is null
+     * @return string
+     */
     private function renderSignupMain()
     {
         return "<main role=\"main\" class=\"inner cover\">
@@ -97,6 +125,10 @@ class View
                 </main>";
     }
 
+    /**
+     * HTML Footer
+     * @return string
+     */
     private function renderFooter()
     {
         return "<footer class=\"mastfoot mt-auto\">
@@ -105,6 +137,11 @@ class View
                     </div>
                   </footer>";
     }
+
+    /**
+     * HTML Scripts
+     * @return string
+     */
     private function renderScript()
     {
         return "<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>

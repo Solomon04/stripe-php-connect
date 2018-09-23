@@ -10,14 +10,16 @@
 class Config
 {
     // database connection constants
-    const DB_HOST = "localhost";
-    const DB_USERNAME = "root";
-    const DB_PASSWORD = "Solken";
+    const DB_HOST = "";
+    const DB_USERNAME = "";
+    const DB_PASSWORD = "";
     const DB_DATABASE = "stripe_connect";
 
-    //Stripe API
-    const STRIPE_PUBLIC = 'pk_test_WRhN4BKmkqctL2nrjCPJCTXi';
-    const STRIPE_SECRET = 'sk_test_AfPrHBd85yRDmJmdW4uK3a9Y';
-    const STRIPE_CONNECT = 'https://connect.stripe.com/express/oauth/authorize?redirect_uri=http://localhost:1234/stripe-connect/&client_id=ca_C2CKbfLxpwpxjuTp9xdtuBcL5zSws9mN&state=tfq3tqf';
+    //Your Stripe API Test Keys. https://dashboard.stripe.com/account/apikeys
+    const STRIPE_PUBLIC = '';
+    const STRIPE_SECRET = '';
+
+    //Your Stripe Application URI Create One Here: https://dashboard.stripe.com/account/applications/settings
+    const STRIPE_CONNECT = '';
 
 }
