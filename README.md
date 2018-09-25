@@ -14,3 +14,6 @@ Update your config File, which can be found at `classes/Config.php`. You will wa
 - `View.php` is where all HTML is stored at. 
 - `autoload.php` allows you to utilize all classes using this simple statement: `include 'include/autoload.php'`
 - `index.php` is your main point of access, as always.
+
+## Questions?
+Please open an issue or send me an email: antoinesolomon5@gmail.com
